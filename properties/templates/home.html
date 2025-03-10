@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="jumbotron text-center bg-primary text-white">
+        <h1 class="display-4">Mirësevini në Sistemin e Menaxhimit të Pronave</h1>
+        <p class="lead">Menaxhoni klientët, pronat, rezervimet dhe gjithçka që lidhet me pronen tuaj.</p>
+    </div>
+
+    <div class="row mt-4">
+        <!-- Kartela për Klientët -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-info text-white">
+                    <h5 class="card-title mb-0"><i class="fas fa-users"></i> Klientët</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Menaxhoni të gjithë klientët, shtoni të rinj dhe modifikoni të dhënat ekzistuese.</p>
+                    <a href="{% url 'klientet' %}" class="btn btn-info">Shiko Klientët</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kartela për Pronat -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0"><i class="fas fa-building"></i> Pronat</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Menaxhoni inventarin e pronave dhe statusin e disponueshmërisë.</p>
+                    <a href="{% url 'pronat' %}" class="btn btn-success">Shiko Pronat</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kartela për Rezervimet -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="card-title mb-0"><i class="fas fa-calendar-alt"></i> Rezervimet</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Gjurmoni të gjitha rezervimet aktive dhe historikun e rezervimeve.</p>
+                    <a href="{% url 'rezervimet' %}" class="btn btn-warning">Shiko Rezervimet</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kartela për Pagesat -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-danger text-white">
+                    <h5 class="card-title mb-0"><i class="fas fa-money-bill-wave"></i> Pagesat</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Menaxhoni pagesat dhe gjeneroni faturat për klientët.</p>
+                    <a href="{% url 'pagesat' %}" class="btn btn-danger">Shiko Pagesat</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kartela për Mirëmbajtjet -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="card-title mb-0"><i class="fas fa-tools"></i> Mirëmbajtjet</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Gjurmoni kërkesat për mirëmbajtje dhe statusin e tyre.</p>
+                    <a href="{% url 'mirembajtjet' %}" class="btn btn-secondary">Shiko Mirëmbajtjet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.3s;
+        min-height: 200px;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    .jumbotron {
+        border-radius: 15px;
+        padding: 2rem;
+    }
+</style>
+{% endblock %}
